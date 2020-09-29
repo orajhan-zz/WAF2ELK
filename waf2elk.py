@@ -1,10 +1,10 @@
 import oci
 import datetime
-import subprocess
+#import subprocess
 import json
 import requests
 import os
-import base64
+#import base64
 
 
 def get_compartments(identity, tenancy_id):
@@ -100,7 +100,7 @@ def update_Splunk(list_waf_logs):
                                                                                                           "null") + '\n'
 
         except Exception as e:
-            print("----------------- Error while updating ELK-------------------")
+            print("----------------- Error while updating Splunk -------------------")
             print(e)
             print("-------------------End----------------------")
 
