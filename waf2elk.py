@@ -33,12 +33,12 @@ def retrieve_waf_logs(ELK_index_name, waas, waf_ocid):
 
         while list_waf_logs.has_next_page:
             if list_waf_logs.next_page == 2:
-                #update_ELK(list_waf_logs)
-                update_Splunk(list_waf_logs)
+                update_ELK(list_waf_logs)
+                #update_Splunk(list_waf_logs)
             else:
                 list_waf_logs = waas.list_waf_logs(waf_ocid, time_observed_greater_than_or_equal_to=start_time, limit=49, page=list_waf_logs.next_page)
-                #update_ELK(list_waf_logs)
-                update_Splunk(list_waf_logs)
+                update_ELK(list_waf_logs)
+                #update_Splunk(list_waf_logs)
 
     except Exception as e:
         print("----------------- Error while retrieving WAF logs -------------------")
