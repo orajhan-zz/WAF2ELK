@@ -48,8 +48,7 @@ def retrieve_waf_logs(ELK_index_name, waas, waf_ocid):
 def update_ELK(list_waf_logs):
     waf_log_output = json.loads(str(list_waf_logs.data))
     # log_types = ["ACCESS", "PROTECTION_RULES", "JS_CHALLENGE", "CAPTCHA", "ACCESS_RULES", "THREAT_FEEDS", "HUMAN_INTERACTION_CHALLENGE", "DEVICE_FINGERPRINT_CHALLENGE", "ADDRESS_RATE_LIMITING"]
-    #print(list_waf_logs.data)
-    #print(waf_log_output)
+
     print("count: {}".format(len(waf_log_output)))
 
     ELK_bulk_format = ''
@@ -81,8 +80,7 @@ def update_ELK(list_waf_logs):
 def update_Splunk(list_waf_logs):
     waf_log_output = json.loads(str(list_waf_logs.data))
     # log_types = ["ACCESS", "PROTECTION_RULES", "JS_CHALLENGE", "CAPTCHA", "ACCESS_RULES", "THREAT_FEEDS", "HUMAN_INTERACTION_CHALLENGE", "DEVICE_FINGERPRINT_CHALLENGE", "ADDRESS_RATE_LIMITING"]
-    # print(list_waf_logs.data)
-    # print(waf_log_output)
+
     print("count: {}".format(len(waf_log_output)))
 
     Splunk_bulk_format = ''
